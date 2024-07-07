@@ -5,7 +5,7 @@ export default {
   project: {
     link: "https://github.com/shuding/nextra",
   },
-  header: () => {
+  head: () => {
     const { title } = useConfig();
     return (
       <>
