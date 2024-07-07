@@ -4,7 +4,13 @@ export const config = {
   runtime: "edge",
 };
 
-export default function handler() {
+export default function (req) {
+  const { searchParams } = new URL(req.url);
+  const hasTitle = searchParams.has("title");
+  const title = hasTitle
+    ? searchParams.get("title")?.slice(0, 100)
+    : "My default title";
+
   return new ImageResponse(
     (
       <div
@@ -19,7 +25,7 @@ export default function handler() {
           justifyContent: "center",
         }}
       >
-        Hello world!
+        {title}
       </div>
     ),
     {
