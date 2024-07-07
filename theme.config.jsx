@@ -10,7 +10,7 @@ export default {
     return (
       <>
         <meta
-          name="og:image"
+          property="og:image"
           content={`https://nextra-ogp-sample.vercel.app/api/ogp?title=${title}`}
         />
       </>
