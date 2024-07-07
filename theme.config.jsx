@@ -16,4 +16,18 @@ export default {
       </>
     );
   },
+  useNextSeoProps: () => ({
+    defaultTitle: "nextra-ogp-sample",
+    titleTemplate: "nextra-ogp-sample",
+    description: "nextra-ogp-sample",
+    twitter: {
+      handle: "@hamao_0820",
+      site: "@hamao_0820",
+      cardType: "summary_large_image",
+    },
+    openGraph: {
+      url: "https://nextra-ogp-sample.vercel.app",
+      description: "nextra-ogp-sample",
+    },
+  }),
 };
